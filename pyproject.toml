@@ -3,6 +3,10 @@ name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["SaveDim <jieto35@yandex.ru>"]
+#Not sure that it's nesessary below
+packages = [
+  { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.8"
