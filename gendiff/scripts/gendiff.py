@@ -4,7 +4,7 @@
 """Gendiff script."""
 
 import argparse
-
+# from gendiff import generate_diff
 
 def main():
     """Will show diff between two files."""
@@ -14,7 +14,9 @@ def main():
     parser.add_argument('-f', '--format', action='store',
                         help='set format of output')
     parser.parse_args()
+    # args = parser.parse_args()
 
+    # generate_diff(args.first_file, args.second_file)
 
 if __name__ == '__main__':
     main()
