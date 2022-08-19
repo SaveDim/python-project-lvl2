@@ -1,4 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/SaveDim/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/SaveDim/python-project-lvl2/actions)
-[![Python CI](https://github.com/SaveDim/python-project-lvl2/actions/workflows/pyci.yml/badge.svg)](https://github.com/SaveDim/python-project-lvl2/actions/workflows/pyci.yml)<br>
+[![Python CI](https://github.com/SaveDim/python-project-lvl2/actions/workflows/pyci.yml/badge.svg)](https://github.com/SaveDim/python-project-lvl2/actions/workflows/pyci.yml)
+<a href="https://codeclimate.com/github/SaveDim/python-project-lvl2/maintainability"><img src="https://api.codeclimate.com/v1/badges/83a405c257d89753d850/maintainability" /></a>
+<a href="https://codeclimate.com/github/SaveDim/python-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/83a405c257d89753d850/test_coverage" /></a><br>
 <a href="https://asciinema.org/a/514373">Generate_diff Asciinema</a><br>
