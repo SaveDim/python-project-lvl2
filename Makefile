@@ -21,6 +21,6 @@ build: check
 	poetry build
 
 package-install:
-    	python3 -m pip install --upgrade --force-reinstall dist/gendiff-0.2.0-py3-none-any.whl
+	python3 -m pip install --upgrade --force-reinstall dist/gendiff-0.2.0-py3-none-any.whl
 
 .PHONY: install test lint selfcheck check build
