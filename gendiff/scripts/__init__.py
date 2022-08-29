@@ -1,1 +1,1 @@
-"""Docstring for public package"""
+"""Docstring for public package."""
