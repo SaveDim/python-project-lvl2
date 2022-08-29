@@ -1,3 +1,4 @@
+"""Standart docstring"""
 import json
 
 
