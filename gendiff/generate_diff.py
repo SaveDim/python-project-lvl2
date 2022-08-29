@@ -5,6 +5,9 @@ import json
 
 def generate_diff(file_path1, file_path2):
     """Return difference between file_path1 and file_path2."""
+
+    # Дмитрий получи из этой части функцию, которая возвращает списки ключей для сравнения!!!
+
     with open(file_path1, 'r') as file1:
         file1 = json.load(file1)
     with open(file_path2, 'r') as file2:
