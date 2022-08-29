@@ -1,4 +1,4 @@
-"""Standart docstring"""
+"""Standart docstring."""
 import json
 
 
@@ -20,4 +20,5 @@ def generate_diff(file_path1, file_path2):
     for i in keys_file2:
         if i not in keys_file1:
             result += '  + ' + str(i) + ': ' + str(b[i]).lower() + '\n'
-    return result + '}'
+    result += '}'
+    return result

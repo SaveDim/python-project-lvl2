@@ -1,2 +1,1 @@
-"""Standart docstring"""
-
+"""Standart docstring."""
