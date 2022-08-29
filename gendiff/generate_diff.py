@@ -4,8 +4,7 @@ import json
 
 
 def generate_diff(file_path1, file_path2):
-    """Returns difference between two files."""
-
+    """Return difference between file_path1 and file_path2."""
     with open(file_path1, 'r') as file1:
         file1 = json.load(file1)
     with open(file_path2, 'r') as file2:
