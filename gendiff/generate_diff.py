@@ -1,24 +1,27 @@
-"""Standart docstring."""
+"""Generate_diff logic."""
+
 import json
 
 
 def generate_diff(file_path1, file_path2):
+    """Returns difference between two files."""
+
     with open(file_path1, 'r') as file1:
-        a = json.load(file1)
+        file1 = json.load(file1)
     with open(file_path2, 'r') as file2:
-        b = json.load(file2)
+        file2 = json.load(file2)
     result = '{\n'
-    keys_file1, keys_file2 = list(a.keys()), list(b.keys())
+    keys_file1, keys_file2 = list(file1.keys()), list(file2.keys())
     for i in sorted(keys_file1):
         if i not in keys_file2:
-            result += '  - ' + str(i) + ': ' + str(a[i]).lower() + '\n'
-        elif i in keys_file2 and a[i] == b[i]:
-            result += '    ' + str(i) + ': ' + str(a[i]).lower() + '\n'
-        elif i in keys_file2 and a[i] != b[i]:
-            result += '  - ' + str(i) + ': ' + str(a[i]).lower() + '\n'
-            result += '  + ' + str(i) + ': ' + str(b[i]).lower() + '\n'
+            result += '  - ' + str(i) + ': ' + str(file1[i]).lower() + '\n'
+        elif i in keys_file2 and file1[i] == file2[i]:
+            result += '    ' + str(i) + ': ' + str(file1[i]).lower() + '\n'
+        elif i in keys_file2 and file1[i] != file2[i]:
+            result += '  - ' + str(i) + ': ' + str(file1[i]).lower() + '\n'
+            result += '  + ' + str(i) + ': ' + str(file2[i]).lower() + '\n'
     for i in keys_file2:
         if i not in keys_file1:
-            result += '  + ' + str(i) + ': ' + str(b[i]).lower() + '\n'
+            result += '  + ' + str(i) + ': ' + str(file2[i]).lower() + '\n'
     result += '}'
     return result
