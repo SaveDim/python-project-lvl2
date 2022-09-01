@@ -9,18 +9,20 @@ def generate_diff(file_path1, file_path2):
         file1 = json.load(file1)
     with open(file_path2, 'r') as file2:
         file2 = json.load(file2)
-    result = '{\n'
+    diff = '{\n'
     keys_file1, keys_file2 = list(file1.keys()), list(file2.keys())
     for key in sorted(keys_file1):
+        file1_value = str(file1[key]).lower()
+        file2_value = str(file2[key]).lower()
         if key not in keys_file2:
-            result += f'  - {key}: {str(file1[key]).lower()}\n'
+            diff += f'  - {key}: {file1_value}\n'
         elif key in keys_file2 and file1[key] == file2[key]:
-            result += f'    {key}: {str(file1[key]).lower()}\n'
+            diff += f'    {key}: {file1_value}\n'
         elif key in keys_file2 and file1[key] != file2[key]:
-            result += f'  - {key}: {str(file1[key]).lower()}\n' \
-                      f'  + {key}: {str(file2[key]).lower()}\n'
+            diff += f'  - {key}: {file1_value}\n' \
+                    f'  + {key}: {file2_value}\n'
     for key in keys_file2:
         if key not in keys_file1:
-            result += f'  + {key}: {str(file2[key]).lower()}\n'
-    result += '}'
-    return result
+            diff += f'  + {key}: {file2_value}\n'
+    diff += '}'
+    return diff
