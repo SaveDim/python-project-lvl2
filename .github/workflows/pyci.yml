@@ -56,8 +56,8 @@ jobs:
         uses: paambaati/codeclimate-action@v3.0.0
         env:
       - name: Sending Reporter
-          env:
-            GITHUB_TOKEN: ${{ secrets.TEST_REPORTER_ID }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST_REPORTER_ID }}
           run: |
             ./cc-test-reporter after-build -r "$GITHUB_TOKEN"
             
