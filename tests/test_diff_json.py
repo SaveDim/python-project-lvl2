@@ -4,7 +4,7 @@
 """JSON files test diff."""
 
 from gendiff.generate_diff import generate_diff
-import tests.correct_answers as expected
+import tests.fixtures.correct_answers as expected
 
 
 def test1_flat_json():
