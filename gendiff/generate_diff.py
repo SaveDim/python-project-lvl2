@@ -1,6 +1,6 @@
 """Generate_diff logic."""
 
-from data_parser import get_file_data
+from .data_parser import get_file_data
 
 
 def generate_diff(file_path1, file_path2):

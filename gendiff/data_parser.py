@@ -1,6 +1,7 @@
-"""Parse data within .json, .yaml, .yml files"""
+"""Parse data within .json, .yaml, .yml files."""
 
 import json
+
 import yaml
 
 
