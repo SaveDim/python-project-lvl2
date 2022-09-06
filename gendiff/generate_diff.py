@@ -1,20 +1,11 @@
 """Generate_diff logic."""
-
-import json
-
-
-def open_file(file_path1, file_path2):
-    """Return two dictionaries."""
-    with open(file_path1, 'r') as file1:
-        file1 = json.load(file1)
-    with open(file_path2, 'r') as file2:
-        file2 = json.load(file2)
-    return file1, file2
+from .data_parser import get_file_data
 
 
 def generate_diff(file_path1, file_path2):
     """Return difference between file_path1 and file_path2."""
-    file1, file2 = open_file(file_path1, file_path2)
+    file1 = get_file_data(file_path1)
+    file2 = get_file_data(file_path2)
     diff = '{\n'
     keys_file1, keys_file2 = list(file1.keys()), list(file2.keys())
     for key in sorted(keys_file1):
