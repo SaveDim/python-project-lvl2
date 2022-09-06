@@ -5,3 +5,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/83a405c257d89753d850/maintainability)](https://codeclimate.com/github/SaveDim/python-project-lvl2/maintainability)
 
 [![asciicast](https://asciinema.org/a/514373.svg)](https://asciinema.org/a/514373)
+[![asciicast](https://asciinema.org/a/519168.svg)](https://asciinema.org/a/519168)
