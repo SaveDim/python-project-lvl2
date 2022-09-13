@@ -1,9 +1,11 @@
+"""Return string in required format."""
+
+
 def stylish(diff_list, level=0):
-    """Returns string in required format."""
     result = '{\n'
     indent = '  '
 
-    for i in range(level):
+    for _ in range(level):
         indent += '    '
 
     diff_list.sort(key=lambda x: x['name'])
@@ -12,16 +14,16 @@ def stylish(diff_list, level=0):
         if node['status'] == 'nested':
             data = stylish(node['children'], level + 1)
             result += f"{indent}  {node['name']}: {data}\n"
-        if node['status'] == 'not changed':
+        elif node['status'] == 'not changed':
             data = get_string(node['data'], indent)
             result += f"{indent}  {node['name']}: {data}\n"
-        if node['status'] == 'added':
+        elif node['status'] == 'added':
             data = get_string(node['data'], indent)
             result += f"{indent}+ {node['name']}: {data}\n"
-        if node['status'] == 'deleted':
+        elif node['status'] == 'deleted':
             data = get_string(node['data'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
-        if node['status'] == 'changed':
+        else:
             data = get_string(node['data before'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
             data = get_string(node['data after'], indent)
@@ -32,7 +34,7 @@ def stylish(diff_list, level=0):
 
 
 def get_string(data, indent):
-    """Returns booleans as lower string format."""
+    """Returns refactored string."""
     if type(data) is dict:
         indent += '    '
         result = '{\n'
@@ -42,7 +44,9 @@ def get_string(data, indent):
         result += indent[:-2] + '}'
     elif data is None:
         result = 'null'
-    else:
+    elif type(data) is bool:
         result = str(data).lower()
+    else:
+        result = str(data)
 
     return result

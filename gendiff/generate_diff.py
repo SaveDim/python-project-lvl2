@@ -1,8 +1,9 @@
 """Generate_diff logic."""
 
+from gendiff.formatters.getting_format import choose_format
+
 from .data_parser import get_file_data
 from .gen_dict_diff import dict_differencer
-from gendiff.formatters.getting_format import choose_format
 
 
 def generate_diff(file_path1, file_path2, format='stylish'):

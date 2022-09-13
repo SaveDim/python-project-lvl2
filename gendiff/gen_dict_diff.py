@@ -1,3 +1,6 @@
+"""Find difference between two dictionaries."""
+
+
 def dict_differencer(dict1, dict2):
     result = []
     keys = sorted(dict1.keys() | dict2.keys())
