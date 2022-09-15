@@ -24,7 +24,7 @@ CORRECT_COMPLEX_RESULT = '''{
         }
         setting6: {
             doge: {
-              - wow:  
+              - wow: 
               + wow: so much
             }
             key: value
