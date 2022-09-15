@@ -459,7 +459,7 @@ testing = ["fields", "hunter", "process-tests (==2.0.2)", "six", "pytest-xdist",
 
 [[package]]
 name = "pyyaml"
-version = "5.4.1"
+version = "^6.0"
 description = "YAML parser and emitter for Python"
 category = "dev"
 optional = false
