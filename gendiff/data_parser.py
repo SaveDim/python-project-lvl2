@@ -16,8 +16,10 @@ def get_extention(path_to_file):
     extention = Path(path_to_file).suffix
     if extention.lower() == '.json':
         return 'json'
-    elif extention == '.yaml' or extention == '.yml':
+    elif extention == '.yaml':
         return 'yaml'
+    elif extention == '.yml':
+        return 'yml'
 
 
 def open_file(fielname):
@@ -27,5 +29,5 @@ def open_file(fielname):
 def load_file_data(filename, format):
     if format == 'json':
         return json.load(filename)
-    elif format == 'yaml':
+    elif format == 'yaml' or format == 'yml':
         return yaml.safe_load(filename)
