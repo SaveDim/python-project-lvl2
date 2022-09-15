@@ -40,7 +40,7 @@ def get_string(data, indent):
         result = '{\n'
         for key in data.keys():
             value = get_string(data[key], indent)
-            result += indent + '  ' + key + ':' + value + '\n'
+            result += f'{indent}  {key}: {value}\n'
         result += indent[:-2] + '}'
     elif data is None:
         result = 'null'
@@ -48,5 +48,4 @@ def get_string(data, indent):
         result = str(data).lower()
     else:
         result = str(data)
-
     return result
