@@ -23,7 +23,7 @@ def stylish(diff_list, level=0):
         elif node['status'] == 'deleted':
             data = get_string(node['data'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
-        elif node['status'] == 'changed':
+        else:
             data = get_string(node['data before'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
             data = get_string(node['data after'], indent)
