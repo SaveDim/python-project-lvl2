@@ -11,5 +11,5 @@ def test1_complex_json():
                             './tests/fixtures/file2_complex.json',
                             )
     expected = open('./tests/fixtures'
-                    '/correct_complex_result.txt', 'r').read()
+                    '/correct_complex_result.md', 'r').read()
     assert correct == expected

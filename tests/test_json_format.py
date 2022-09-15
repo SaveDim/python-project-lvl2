@@ -4,12 +4,13 @@
 """JSON files test diff."""
 
 from gendiff.generate_diff import generate_diff
-import tests.fixtures.correct_answers as expected
 
 
-def test1_complex_plain():
+def test1_complex_json():
     correct = generate_diff('./tests/fixtures/file1_complex.json',
                             './tests/fixtures/file2_complex.json',
                             format='json'
                             )
-    assert correct == expected.CORRECT_JSON_COMPLEX_RESULT
+    expected = open('./tests/fixtures'
+                    '/correct_json_complex_result.md', 'r').read()
+    assert correct == expected

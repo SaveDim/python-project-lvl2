@@ -4,7 +4,6 @@
 """JSON files test diff."""
 
 from gendiff.generate_diff import generate_diff
-import tests.fixtures.correct_answers as expected
 
 
 def test1_flat_plain():
@@ -12,4 +11,6 @@ def test1_flat_plain():
                             './tests/fixtures/file2_flat.json',
                             format='plain'
                             )
-    assert correct == expected.CORRECT_PLAIN_FLAT_RESULT
+    expected = open('./tests/fixtures'
+                    '/correct_plain_flat_result.md', 'r').read()
+    assert correct == expected
