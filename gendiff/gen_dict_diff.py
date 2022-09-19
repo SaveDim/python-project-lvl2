@@ -1,7 +1,7 @@
 """Find difference between two dictionaries."""
 
 
-def dict_differencer(dict1, dict2):
+def build_diff(dict1, dict2):
     result = []
     keys = sorted(dict1.keys() | dict2.keys())
 
@@ -15,7 +15,7 @@ def dict_differencer(dict1, dict2):
             node['data'] = dict1[key]
         elif type(dict1[key]) is dict and type(dict2[key]) is dict:
             node['status'] = 'nested'
-            node['children'] = dict_differencer(dict1[key], dict2[key])
+            node['children'] = build_diff(dict1[key], dict2[key])
         elif dict1[key] == dict2[key]:
             node['status'] = 'not changed'
             node['data'] = dict1[key]
