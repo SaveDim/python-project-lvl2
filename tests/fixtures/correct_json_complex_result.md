@@ -21,8 +21,8 @@
             {
                 "name": "setting3",
                 "status": "changed",
-                "data before": true,
-                "data after": null
+                "data_before": true,
+                "data_after": null
             },
             {
                 "name": "setting4",
@@ -47,8 +47,8 @@
                             {
                                 "name": "wow",
                                 "status": "changed",
-                                "data before": "",
-                                "data after": "so much"
+                                "data_before": "",
+                                "data_after": "so much"
                             }
                         ]
                     },
@@ -73,8 +73,8 @@
             {
                 "name": "baz",
                 "status": "changed",
-                "data before": "bas",
-                "data after": "bars"
+                "data_before": "bas",
+                "data_after": "bars"
             },
             {
                 "name": "foo",
@@ -84,10 +84,10 @@
             {
                 "name": "nest",
                 "status": "changed",
-                "data before": {
+                "data_before": {
                     "key": "value"
                 },
-                "data after": "str"
+                "data_after": "str"
             }
         ]
     },

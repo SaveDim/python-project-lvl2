@@ -29,8 +29,8 @@ def build_plain(diff, path=''):
             result.append(difference)
         if node['status'] == 'changed':
             path_to_change = path + node['name']
-            change_before = to_string(node['data before'])
-            change_after = to_string(node['data after'])
+            change_before = to_string(node['data_before'])
+            change_after = to_string(node['data_after'])
             difference = (
                 f"Property '{path_to_change}' was updated. "
                 f'From {change_before} to {change_after}'
