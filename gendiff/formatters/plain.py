@@ -24,7 +24,7 @@ def build_plain(diff, path=''):
             result.append(difference)
         if node['status'] == 'deleted':
             path_to_change = path + node['name']
-            change = to_string(node['data'])
+            change_before = to_string(node['data'])
             difference = "Property '{}' was removed".format(path_to_change)
             result.append(difference)
         if node['status'] == 'changed':
