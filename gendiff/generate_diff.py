@@ -1,6 +1,6 @@
 """Generate_diff logic."""
 
-from gendiff.formatters.getting_format import choose_format
+from gendiff.formatters.formatter import choose_format
 
 from .data_parser import get_file_data
 from .gen_dict_diff import build_diff
