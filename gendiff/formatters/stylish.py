@@ -24,9 +24,9 @@ def stylish(diff_list, level=0):
             data = get_string(node['data'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
         else:
-            data = get_string(node['data before'], indent)
+            data = get_string(node['old_value'], indent)
             result += f"{indent}- {node['name']}: {data}\n"
-            data = get_string(node['data after'], indent)
+            data = get_string(node['new_value'], indent)
             result += f"{indent}+ {node['name']}: {data}\n"
     result += indent[:-2] + '}'
 
