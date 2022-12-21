@@ -21,8 +21,8 @@ def dict_differencer(dict1, dict2):
             node['data'] = dict1[key]
         else:
             node['status'] = 'changed'
-            node['data before'] = dict1[key]
-            node['data after'] = dict2[key]
+            node['old_value'] = dict1[key]
+            node['new_value'] = dict2[key]
         result.append(node)
 
     return result
