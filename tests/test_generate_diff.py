@@ -8,6 +8,7 @@ import pytest
 
 from tests import get_path
 
+
 @pytest.mark.parametrize(
     "test_input1,test_input2, formatter,  expected",
     [
