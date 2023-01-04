@@ -22,8 +22,8 @@ def get_extention(path_to_file):
         return 'yml'
 
 
-def open_file(fielname):
-    return open(fielname)
+def open_file(filename):
+    return open(filename)
 
 
 def load_file_data(filename, format):
