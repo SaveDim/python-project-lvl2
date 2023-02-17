@@ -37,7 +37,7 @@ stylish
 
 plain
 
-json
+json.
 
 for example: 
 ```bash
